@@ -12,7 +12,7 @@ Principal.post('/init', async (req, res) => {
     const password = 'Admin';
 
     try {
-        let user = await User.findOne({ email });
+        const user = await User.findOne({ email });
 
         if (user) {
             return res.status(400).json({ msg: 'Principal already exists' });
@@ -38,7 +38,7 @@ Principal.post('/register', async (req, res) => {
     const { email, password, role } = req.body;
 
     try {
-        let user = await User.findOne({ email });
+        const  user = await User.findOne({ email });
 
         if (user) {
             return res.status(400).json({ msg: 'User already exists' });
