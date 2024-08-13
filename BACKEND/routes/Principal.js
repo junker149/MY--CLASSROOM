@@ -3,8 +3,10 @@ const Principal = express.Router();
 
 Principal.use(express.json());
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 Principal.post("/login", async (req, res) => {
+    const email = 'principal@classroom.com';
+    const password = 'Admin';
     try {
         const body = req.body;
 
@@ -20,10 +22,6 @@ Principal.post("/login", async (req, res) => {
     }
 })
 
-module.exports = Principal;    
-=======
-Principal.post("/login", (req, res) => {
-    const body = req.body;
-})
-module.exports=Principal;
->>>>>>> addf990ed21399367b5d4232ada8c033e78dfc8f
+module.exports = Principal;
+
+
