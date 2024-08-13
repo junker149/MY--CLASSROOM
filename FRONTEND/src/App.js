@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+const [usertype] = useState("");
 
 function App() {
   return (
@@ -7,6 +8,14 @@ function App() {
     <div className='wrapper'>
     <form action="">
       <h1>LOGIN ID</h1>
+      <div>
+      <input>
+        type "radio"
+        name "usertype"
+        value "user"
+        onChange = ={(e) => usertype(e.target.value)}
+        </input>
+      </div>
       <div classroom="input-box">
         <input type ="text" placeholder ='USERNAME' required/>
       </div>
